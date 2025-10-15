@@ -1,0 +1,70 @@
+MIT License
+
+Copyright (c) 2022 Jeongho Nam (Original Nestia Template)
+Copyright (c) 2025 Wrtn Technologies (Agentica Framework)
+Copyright (c) 2025 WiSoft (Modifications and Additions)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+TEMPLATE ATTRIBUTION
+
+This project is built upon the following:
+- Agentica Framework: Copyright (c) 2025 Wrtn Technologies
+- Nestia Template: Copyright (c) 2022 Jeongho Nam
+- Significant modifications and additions made by Team WiSoft
+
+All template/framework code is MIT licensed and original authors are credited above.
+
+================================================================================
+
+PROJECT STRUCTURE
+
+This project consists of two main components:
+- server/ - Backend NestJS application (MIT License)
+- client/ - Frontend React application (MIT License)
+
+Each component has its own LICENSE and NOTICE files detailing the third-party
+software used within that component and template attribution.
+
+================================================================================
+
+EXTERNAL API USAGE
+
+This project integrates with the following external services:
+1. OpenAI API - Subject to OpenAI's Terms of Use
+2. OpenWeatherMap API - Subject to OpenWeatherMap's Terms of Service
+3. Naver Local Search API - Subject to Naver Open API Terms of Service
+
+Users of this software are responsible for complying with these services'
+terms and conditions.
+
+================================================================================
+
+THIRD-PARTY LICENSES
+
+This project uses various open source packages. For a complete list of
+third-party licenses, please refer to:
+- server/NOTICE - Backend dependencies
+- client/NOTICE - Frontend dependencies
+
+To generate a complete license report, run:
+  cd server && bunx license-checker --summary
+  cd client && bunx license-checker --summary

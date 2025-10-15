@@ -33,7 +33,7 @@
 - **AI 오케스트레이션**: Agentica RPC 0.31.x
 - **런타임 검증**: Typia 9.x
 - **AI 모델**: OpenAI GPT-4o-mini
-- **외부 API**: OpenWeatherMap, Naver Local Search
+- **외부 API**: 기상청 API, Naver Local Search
 - **통신**: TGrid (타입 안전 WebSocket RPC)
 
 #### 프론트엔드 (Client)
@@ -43,7 +43,7 @@
 - **AI 통신**: Agentica RPC Client
 
 #### 런타임 & 도구
-- **런타임**: Bun (JavaScript runtime & package manager)
+- **런타임**: Bun 또는 Node.js (Bun 권장)
 - **언어**: TypeScript 5.9.x
 - **코드 품질**: ESLint, Prettier
 
@@ -74,9 +74,9 @@ ChatController (WebSocket 진입점)
 - [Bun](https://bun.sh) 1.0 이상
 - Node.js 18 이상 (Bun이 없는 경우)
 - 외부 API 키:
- - [OpenRouter API Key](https://openrouter.ai/settings/keys)
-  - [기상청 API Key](https://apihub.kma.go.kr/) (기상청 API Hub 회원가입 필요)
-  - [Naver Open API](https://developers.naver.com/main/) (Client ID & Secret)
+- [OpenRouter API Key](https://openrouter.ai/settings/keys)
+- [기상청 API Key](https://apihub.kma.go.kr/) (기상청 API Hub 회원가입 필요)
+- [Naver Open API](https://developers.naver.com/main/) (Client ID & Secret)
 
 ### 설치 및 실행
 
@@ -89,6 +89,7 @@ cd wrtn-dish
 
 #### 2. 백엔드 설정
 
+**Bun 사용 (권장)**:
 ```bash
 cd server
 
@@ -108,11 +109,31 @@ bun run build
 bun run dev
 ```
 
+**npm 사용**:
+```bash
+cd server
+
+# 의존성 설치
+npm install
+
+# 환경변수 설정
+cp .env.example .env  # 아래 환경변수 예시 참고
+
+# TypeScript 트랜스포머 설치 (필수)
+npm run prepare
+
+# 프로젝트 빌드 (SDK + Main + Test)
+npm run build
+
+# 개발 서버 실행
+npm run dev
+```
+
 **환경변수 (.env 예시)**:
 ```bash
 API_PORT=37001
-OPENAI_API_KEY=sk-proj-...
-WEATHER_API_KEY=your_openweathermap_key
+OPENROUTER_API_KEY=sk-or-...
+WEATHER_API_KEY=your_kma_api_key_here
 NAVER_CLIENT_ID=your_naver_client_id
 NAVER_CLIENT_SECRET=your_naver_client_secret
 ```
@@ -154,6 +175,7 @@ wrtn-dish/
 │   │   ├── providers/         # 외부 API 프로바이더
 │   │   ├── api/               # Nestia 자동생성 API 구조체 & SDK
 │   │   ├── data/              # 정적 데이터 (음식 카테고리 등)
+│   │   ├── utils/             # 유틸리티 함수 (좌표 변환, 에러 처리 등)
 │   │   ├── modules/           # NestJS 모듈
 │   │   └── executable/        # 실행 진입점 (server, swagger)
 │   ├── test/                  # E2E 테스트

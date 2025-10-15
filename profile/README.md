@@ -74,8 +74,8 @@ ChatController (WebSocket 진입점)
 - [Bun](https://bun.sh) 1.0 이상
 - Node.js 18 이상 (Bun이 없는 경우)
 - 외부 API 키:
-  - [OpenAI API Key](https://platform.openai.com/api-keys)
-  - [OpenWeatherMap API Key](https://openweathermap.org/api)
+ - [OpenRouter API Key](https://openrouter.ai/settings/keys)
+  - [기상청 API Key](https://apihub.kma.go.kr/) (기상청 API Hub 회원가입 필요)
   - [Naver Open API](https://developers.naver.com/main/) (Client ID & Secret)
 
 ### 설치 및 실행
@@ -270,7 +270,7 @@ cd client && bunx license-checker --summary
 
 ## 참고 링크
 
-- [Agentica 공식 문서](https://github.com/agentica-project/agentica)
+- [Agentica 공식 문서](https://wrtnlabs.io/agentica/docs/)
 - [NestJS 공식 문서](https://docs.nestjs.com/)
 - [Nestia 공식 문서](https://nestia.io/)
 - [Bun 공식 사이트](https://bun.sh/)

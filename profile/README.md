@@ -1,6 +1,6 @@
 <div align="center">
 
-# WRTN Dish - AI 기반 음식 추천 시스템 <img src="./client/public/wrtn-dish.png" alt="WRTN Dish Logo" width="45" align="center">
+# WRTN Dish - AI 기반 음식 추천 시스템 <img src="https://github.com/wrtnDish/dish-frontend/blob/main/public/wrtn-dish.png" alt="WRTN Dish Logo" width="45" align="center">
 
 > Agentica를 활용한 지능형 음식 추천 플랫폼
 
